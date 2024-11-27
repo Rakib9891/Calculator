@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: rgb(158, 146, 131);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin: 4vh 0 10vh 0;
+}
+
+.calculator {
+  border: 2px solid grey;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(48, 107, 74, 0.796);
+}
+.screen {
+  height: 10.5vmin;
+  width: 36.5vmin;
+  background-color: rgb(174, 175, 176);
+  border-radius: 8px;
+  margin: 5px 0 10px 0;
+}
+
+.cal_btn {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  margin: 5px;
+  grid-gap: 5px;
+}
+
+.item {
+  position: relative;
+  font-size: 1.4rem;
+  height: 9vmin;
+  width: 9vmin;
+  border: 1px outset rgba(128, 128, 128, 0);
+  border-radius: 10%;
+  background-color: rgb(203, 192, 176);
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: rgb(171, 162, 149);
+  transition: background-color 0.2s ease;
+}
+.item2:hover {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: rgba(195, 134, 55, 0.848);
+}
+
+.item:active {
+  content: "";
+  background: rgb(171, 162, 149);
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  padding-left: 100%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.item2:active {
+  content: "";
+  background: rgba(195, 134, 55, 0.848);
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  padding-left: 100%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.item:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.item2:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.item2 {
+  font-size: 1.4rem;
+  height: 9vmin;
+  width: 9vmin;
+  border: 1px outset rgba(128, 128, 128, 0);
+  border-radius: 10%;
+  background-color: rgba(238, 163, 65, 0.848);
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    height: 9vmax;
+    width: 9vmax;
+  }
+  .screen {
+    height: 10.3vmax;
+    width: 36.6vmax;
+  }
+}
